@@ -9,56 +9,76 @@
     <title>Document</title>
     <script src="script.js" defer></script>
   </head>
-  <body>
-    <header><h2>Kurzanleitung für {WEB-API-NAME}</h2></header>
-    <main>
-      <h3>Wozu braucht es diese WEB-API</h3>
-      <p>
-        Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam odio
-        mauris, <kbd>sollicitudin</kbd> et tellus quis, tincidunt tincidunt
-        urna. <mark>Vivamus facilisis mi</mark> arcu, quis tempor sapien porta
-        laoreet. Nulla nec semper arcu. Proin vehicula at urna eu tristique.
-        Fusce dignissim ante libero, ut vulputate ex congue ac. Proin malesuada,
-        mauris a ultrices congue, urna est lacinia felis, quis ornare diam mi et
-        mauris. Suspendisse ornare finibus diam nec egestas. Nunc tristique ante
-        at erat varius, eu pulvinar dui sollicitudin. In at aliquam nulla, ut
-        tristique arcu. Nam non nibh condimentum, pulvinar sapien ac, gravida
-        est. Morbi dapibus tristique turpis, et auctor odio egestas at. Vivamus
-        placerat mollis magna, et fringilla ligula semper a. In eleifend
-        sagittis ante, id volutpat nisi rutrum a.
-      </p>
-      <h3>Codebeispiele</h3>
-      <button id="beispiel1">Ein Beispielskript ausführen</button>
-      <pre><code class="language-js"> 
-    const container = document.querySelector("#container");
-    const text = document.querySelector("#text");
-    
-    const totalTime = 7500;
-    const breatheTime = (totalTime / 5) * 2;
-    const holdTime = totalTime / 5;
-    
-    breathAnimation();
-    
-    function breathAnimation() {
-        text.innerHTML = "Einatmen!";
-        container.className = "container grow"; // Growanimation in css
-    
-        setTimeout(() => {
-        text.innerHTML = "Halten";
-    
-        setTimeout(() => {
-            text.innerHTML = "Ausatmen!";
-            container.className = "container shrink"; // shrinkanimation in css
-        }, holdTime); // nach dem Halten ausatmen
-        }, breatheTime); // Nach einem Atemzyklus halten
-    }
-    
-    setInterval(breathAnimation, totalTime);
+  <body style="background: linear-gradient(237.12deg, #003483 41.56%, #743584 72.97%);">
+    <header><h2>Kurzanleitung für Javascript Intl API</h2></header>
+   <div style="color: #FFFFFF;">
+    <div style="display: flex;">
+      <div style="flex-grow: 1;">
+        <p>JavaScript Intl ist eine Bibliothek für die Internationalisierung von Webanwendungen.</p>
+          Internationalisierung, auch bekannt als i18n, bezieht sich auf den Prozess der Anpassung von Software an verschiedene Sprachen, Kulturen und Ländern. 
+          </p>
+      </div>
+      <div style="flex-shrink: 0; margin-left: 10px;">
+        <img src= "https://blog.openreplay.com/images/the-complete-guide-to-localizing-your-app-with-javascripts-internationalization-api/images/hero.png" alt="Internationalisierung" height="215" width="393" style="margin-top: 25px;">
+      </div>
+    </div>
+    <p>JavaScript Intl bietet Entwicklern eine einfache und effektive Möglichkeit Anwendungen für verschiedene Sprachen und Kulturen zu lokalisieren. 
+      Das bedeutet, dass eine Anwendung in verschiedenen Sprachen angezeigt werden kann, abhängig von den Präferenzen des Nutzers.</p>
+      <button style="background-color:#743584 ;" id="beispiel1">Hier erfährst du mehr !</button>
+    </div>
+      <main style="color: #FFFFFF;">
+      <h3>Wozu braucht es diese WEB-API ?</h3>
+      <p>Die JavaScript Intl-API bietet eine Vielzahl von Funktionen und Objekten, die Entwickler verwenden können, um die Internationalisierung von Webanwendungen zu erleichtern.</p>
+      <p>Das am häufigsten verwendete Objekt ist das Intl.DateTimeFormat-Objekt, das Entwicklern die Möglichkeit gibt, Datums- und Uhrzeitangaben in verschiedenen Formaten anzuzeigen. So zum Beispiel das Anzeigen von Tagen vor Monaten in einigen Ländern oder das Anzeigen von Stunden im 24-Stunden-Format.
+        
+        <p>Die Funktion DateTimeFormat kann verwendet werden, um ein Datum in das gewünschte Format zu bringen. 
+          <p>Hier ein Beispiel:
+        <pre><code class="language-js">
+        constdate = newDate('2023-03-21'); 
+        constformatter = newIntl.DateTimeFormat('de-DE', { 
+          weekday: 'long', 
+          year: 'numeric', 
+          month: 'long', 
+          day: 'numeric', 
+        }); 
+        console.log(formatter.format(date)); 
+        // Ausgabe: "Dienstag, 21. März 2023"
+      </code></pre>
+        
+      <p>In diesem Beispiel wird das Datum "2023-03-21" für den Wochentag, den Monat und das Jahr im deutschen Sprachraum formatiert. Der DateTimeFormat-Konstruktor akzeptiert ebenfalls verschiedene Optionen, um das Ausgabeformat anzupassen.
+      <p>Ein weiteres nützliches Objekt in JavaScript Intl ist das Intl.NumberFormat-Objekt, mit dem Entwickler Zahlen in verschiedenen Formaten anzeigen können. Hierzu gehören beispielsweise die Anzeige von Dezimaltrennzeichen, Tausendertrennzeichen und Währungssymbolen.
+        <p>Hier ein Beispiel:</p>
+        <pre><code class="language-js">
+        constnumber = 1234.567; 
+        constformatter = newIntl.NumberFormat('de-DE', { 
+          style: 'currency', currency: 'EUR', 
+        }); 
+        console.log(formatter.format(number)); 
+        // Ausgabe: "1.234,57 €"
+      </code></pre>
+        <p>In diesem Beispiel wird die Zahl 1234.567 in das Währungsformat für Euro im deutschen Sprachraum formatiert. Der NumberFormat-Konstruktor akzeptiert verschiedene Optionen, um das Ausgabeformat anzupassen.</p>
+        <p>Darüber hinaus bietet JavaScript Intl auch Unterstützung für Sprach-Tagging, eine Methode zur Identifizierung der Sprache, in der Text geschrieben ist. Die Sprache wird dabei durch einen eindeutigen Code identifiziert, der aus einer Sprach- und Regionalkennung besteht.</p>
+        <p>Hier ein Beispiel:</p>
+        <pre><code class="language-js">
+        constmessages = { 
+          en: { 
+            greeting: 'Hello, world!', 
+          }, 
+          de: { greeting: 'Hallo, Welt!', }, 
+        }; 
+        constlanguage = navigator.language; 
+        consttranslatedMessage = messages[language].greeting; 
+        console.log(translatedMessage); 
+        // Ausgabe: "Hallo, Welt!" (für den Sprachraum "de")
+      </code></pre>
+
+      <p>In diesem Beispiel wird die Variable language verwendet, um die bevorzugte Sprache des Nutzers zu ermitteln. Dann wird der entsprechende Text aus dem messages-Objekt abgerufen und angezeigt.</p>
+      
       </code></pre>
       <h3>Weiterführende Links:</h3>
       <ul>
         <li>
-          Mdn: <a href="https://developer.mozilla.org/en-US/">Beispiel</a>
+          Mdn: <a style="color:  " href="https://developer.mozilla.org/en-US/">Beispiel</a>
         </li>
       </ul>
     </main>
