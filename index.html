@@ -131,9 +131,9 @@
       ersetzt. Dies wurde ganz einfach mit der Ergänzung {type: 'disjunction'} erreicht.
     </p>
 
-    <p>Sortierungen kann man mit dem <mark>Intl.Collator-Objekt</mark> an die jeweiligen Standards anpassen. Bei besonderen Buchstaben, 
-    die nicht in allen Sprachen verwendet werden, wie zum Beispiel dem schwedischen "Å", ist die alphabetische Reihenfolge von Region zu Region unterschiedlich.
-  Wenn man nun also Wörter in eine alphabetische Reihenfolge bringen will und ein Wort mit einem solchen Buchstaben beginnt, kann es Regionsabhängig an verschiedenen Plätzen stehen.</p>
+    <p>Sortierungen von Strings innerhalb eines Arrays kann man mit dem <mark>Intl.Collator-Objekt</mark> an die jeweiligen Standards anpassen. Bei besonderen Buchstaben, 
+    die nicht in allen Sprachen verwendet werden, wie zum Beispiel dem schwedischen "Å", ist die Sortierung von Region zu Region unterschiedlich.
+  Wenn man nun also Wörter in eine Reihenfolge bringen will und ein Wort mit einem solchen Buchstaben beginnt, kann es Regionsabhängig an verschiedenen Plätzen stehen.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
         let names = ['Adam', 'Bob','Åslaug', 'Ørjan'];
@@ -151,7 +151,8 @@
         //Ausgabe: 'Adam', 'Bob', 'Åslaug', 'Ørjan'
     </code></pre>
 
-    <p>Das Beispiel zeigt genau den oben genannten Fall. Nach englischen Standards erfolgt eine andere Reihung der Wörter, als bei den schwedischen Standards.</p>
+    <p>Das Beispiel zeigt genau den oben genannten Fall. Nach englischen Standards erfolgt eine andere Reihung der Wörter, als bei den schwedischen Standards 
+      'Åslaug' steht im schwedischen erst eine Stelle weiter hinten als im englischen Standard.</p>
 
 
     <h3>locales argument</h3>
