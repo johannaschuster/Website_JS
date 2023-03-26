@@ -58,20 +58,23 @@
 
     <p>Hier ein Beispiel:
     <pre><code class="language-js">
-        constdate = newDate('2023-03-21'); 
-        constformatter = newIntl.DateTimeFormat('de-DE', { 
-          weekday: 'long', 
-          year: 'numeric', 
-          month: 'long', 
-          day: 'numeric', 
-        }); 
-        console.log(formatter.format(date)); 
-        // Ausgabe: "Dienstag, 21. März 2023"
+      const options = {
+        weekday: 'long',
+        year: 'numeric',
+        month: 'long',
+        day: 'numeric'
+      };
+      
+      const date = new Date();
+      
+      const formatter = new Intl.DateTimeFormat('de-DE', options);
+      const formattedDate = formatter.format(date);
+      
+      console.log(formattedDate); 
+      //Ausgabe: Derzeitiges Datum (z.B. Montag, 27. März 2023)
       </code></pre>
 
-    <p>In diesem Beispiel wird das Datum "2023-03-21" für den Wochentag, den Monat und das Jahr im deutschen Sprachraum
-      formatiert. Der DateTimeFormat-Konstruktor akzeptiert ebenfalls verschiedene Optionen, um das Ausgabeformat
-      anzupassen.
+    <p>In diesem Beispiel wird das Intl.DateTimeFormat-Objekt verwendet, um das derzeitige Datum in einem bestimmten Format anzuzeigen. Das Objekt wird mit dem gewünschten Sprach- und Regionencode (hier "de-DE" für Deutsch in Deutschland) und den Formatierungsoptionen (hier "Wochentag", "Jahr", "Monat" und "Tag") initialisiert.</p>
 
     <p>Ein weiteres nützliches Objekt in JavaScript Intl ist das <mark>Intl.NumberFormat-Objekt</mark> , mit dem
       Entwickler Zahlen in
