@@ -113,7 +113,9 @@
       Jahre, etc. und die Einheit dazu einem neuen RelativeTimeFormat-Objekt zugewiesen werden. 
       Daraus wird dann ein Satz in der jeweiligen Sprache im richtigen Format gebaut.</p>
 
-    <p>lorem ipsum</p>
+    <p>Ein weiteres Objekt wird für die verschiedenen Standards von aufzählungen benötigt. 
+      Das <mark>Intl.ListFormat-Objekt</mark> kann alle Arten von Aufzählungen für die einzelnen Regionen generieren.
+    Das heißt es werden Wörter wie "und" oder "oder" zwischen die einzelnen Wörter gesetzt.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
         const listFormat = new Intl.ListFormat("de-DE");
@@ -125,7 +127,13 @@
         //Ausgabe: Bohnen, Reis oder Salat
     </code></pre>
 
-    <p>lorem ipsum</p>
+    <p>Beim ersten Beispiel wurde eine Aufzählung im deutschen Format mit Trennwort "und" generiert. Beim zweiten Beispiel wurde das "und" durch ein "oder"
+      ersetzt. Dies wurde ganz einfach mit der Ergänzung {type: 'disjunction'} erreicht.
+    </p>
+
+    <p>Sortierungen kann man mit dem <mark>Intl.Collator-Objekt</mark> an die jeweiligen Standards anpassen. Bei besonderen Buchstaben, 
+    die nicht in allen Sprachen verwendet werden, wie zum Beispiel dem schwedischen "Å", ist die alphabetische Reihenfolge von Region zu Region unterschiedlich.
+  Wenn man nun also Wörter in eine alphabetische Reihenfolge bringen will und ein Wort mit einem solchen Buchstaben beginnt, kann es Regionsabhängig an verschiedenen Plätzen stehen.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
         let names = ['Adam', 'Bob','Åslaug', 'Ørjan'];
@@ -133,15 +141,18 @@
         let enCollator = new Intl.Collator('en-US', { 
           sensitivity: 'base' 
         });
-        console.log(names.sort(enCollator.compare)); // ['Adam', 'Åslaug', 'Bob', 'Ørjan']
+        console.log(names.sort(enCollator.compare)); 
+        //Ausgabe: 'Adam', 'Åslaug', 'Bob', 'Ørjan'
         
         let svCollator = new Intl.Collator('sv-SE', { 
           sensitivity: 'base' 
         });
-        console.log(names.sort(svCollator.compare)); // ['Adam', 'Bob', 'Åslaug', 'Ørjan']
+        console.log(names.sort(svCollator.compare)); 
+        //Ausgabe: 'Adam', 'Bob', 'Åslaug', 'Ørjan'
     </code></pre>
 
-    <p>lorem ipsum</p>
+    <p>Das Beispiel zeigt genau den oben genannten Fall. Nach englischen Standards erfolgt eine andere Reihung der Wörter, als bei den schwedischen Standards.</p>
+
 
     <h3>locales argument</h3>
     <p>Mit Hilfe des locales argument wird die vom User genutzte Region festgestellt. So kann mit Funktionen des Intl
