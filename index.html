@@ -70,16 +70,27 @@
           let enFormatter = new Intl.RelativeTimeFormat('en-US', {
           style: 'narrow'
         });
-        console.log(enFormatter.format(-1, 'day')); // 1 day ago
+        console.log(enFormatter.format(-1, 'day')); 
         
         let frFormatter = new Intl.RelativeTimeFormat('fr-FR', {
           style: 'narrow'
         });
-        console.log(frFormatter.format(-1, 'day')); // -1 j
+        console.log(frFormatter.format(-1, 'day')); 
       </code></pre>
 
       <p>lorem ipsum</p>
+      const listFormat = new Intl.ListFormat("en-US");
+listFormat.format(['Dafe', 'Daneil', "Gbolahan", "Kelani", "David"]);
+
+const listFormatOr = new Intl.ListFormat("en-US", {type: 'disjunction'});
+listFormatOr.format(["Beans", "Rice", "Plantian"])
+      <p>lorem ipsum</p>
+      <p>Hier ein Beispiel:</p>
+      <pre><code class="language-js">
       
+    </code></pre>
+
+    <p>lorem ipsum</p>
       </code></pre>
       <h3>Weiterführende Links:</h3>
       <ul>
