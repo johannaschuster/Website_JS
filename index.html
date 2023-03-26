@@ -15,16 +15,15 @@
     <div style="display: flex;">
       <div style="flex-grow: 1;">
         <p>JavaScript Intl ist eine Bibliothek für die Internationalisierung von Webanwendungen.</p>
-          Internationalisierung, auch bekannt als i18n, bezieht sich auf den Prozess der Anpassung von Software an verschiedene Sprachen, Kulturen und Ländern. 
+          Internationalisierung, auch bekannt als i18n, bezieht sich auf den Prozess der Anpassung von Software an verschiedene Sprachen, Kulturen und Ländern ohne den Quellcode ändern zu müssen. 
           </p>
       </div>
       <div style="flex-shrink: 0; margin-left: 10px;">
         <img src= "https://blog.openreplay.com/images/the-complete-guide-to-localizing-your-app-with-javascripts-internationalization-api/images/hero.png" alt="Internationalisierung" height="215" width="393" style="margin-top: 25px;">
       </div>
     </div>
-    <p>JavaScript Intl bietet Entwicklern eine einfache und effektive Möglichkeit Anwendungen für verschiedene Sprachen und Kulturen zu lokalisieren. 
-      Das bedeutet, dass eine Anwendung in den Standards der Region angezeigt werden kann, abhängig von den Präferenzen des Nutzers.</p>
-      <button style="background-color:#743584 ;" onclick="window.location.href = 'https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl?retiredLocale=de';">Hier erfährst du mehr !</button>
+    <p>JavaScript Intl bietet Entwicklern eine einfache und effektive Möglichkeit, Anwendung in den Standards der Region abhängig von den Präferenzen des Nutzers anzuzeigen.</p>
+      <button style="background-color:#743584 ;" onclick="window.location.href = 'https://locize.com/blog/was-ist-i18n/';">Hier erfährst du mehr !</button>
     </div>
       <main style="color: #FFFFFF;">
       <h3>Wozu braucht es diese WEB-API ?</h3>
@@ -50,12 +49,13 @@
         <p>Hier ein Beispiel:</p>
         <pre><code class="language-js">
           const number = 123456.789;
-          const formatter = new Intl.NumberFormat('de-DE', {
-            style: 'currency',
-            currency: 'EUR'
-          });
-          console.log(formatter.format(number));
-          // Ausgabe: "€ 123.456,79"
+          console.log(
+            new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" 
+          }).format(
+            number,
+            ),
+          );
+          // Ausgabe: "123.456,79 €"
       </code></pre>
         <p>In dem Beispielcode wird eine Zahl (number) im Währungsformat für Deutschland formatiert. Dazu wird ein neues Intl.NumberFormat-Objekt erstellt, dem die gewünschte Sprache ('de-DE') und das gewünschte Format (style: 'currency', currency: 'EUR') übergeben werden. Das Objekt wird dann verwendet, um die Zahl zu formatieren und das Ergebnis auf der Konsole auszugeben.</p>
         <p>Darüber hinaus bietet JavaScript Intl auch Unterstützung für Sprach-Tagging, eine Methode zur Identifizierung der Sprache, in der Text geschrieben ist. Die Sprache wird dabei durch einen eindeutigen Code identifiziert, der aus einer Sprach- und Regionalkennung besteht.</p>
@@ -78,6 +78,9 @@
       </code></pre>
       <h3>Weiterführende Links:</h3>
       <ul>
+        <li>
+          <a style="color: white" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl?retiredLocale=de">Intl object</a>
+        </li>
         <li>
           <a style="color:  white" href="https://egghead.io/blog/understanding-the-intl-javascript-api">Understanding the Intl Javascript API</a>
         </li>
