@@ -1,41 +1,56 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <link rel="stylesheet" href="/assets/simple.css" />
-    <link rel="stylesheet" href="/assets/hljs-default.css" />
-    <title>Document</title>
-    <script src="script.js" defer></script>
-  </head>
-  <body style="background: linear-gradient(237.12deg, #003483 41.56%, #743584 72.97%);">
-    <header><h2>Kurzanleitung für Javascript Intl API</h2></header>
-   <div style="color: #FFFFFF;">
+
+<head>
+  <meta charset="UTF-8" />
+  <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <link rel="stylesheet" href="/assets/simple.css" />
+  <link rel="stylesheet" href="/assets/hljs-default.css" />
+  <title>Document</title>
+  <script src="script.js" defer></script>
+</head>
+
+<body style="background: linear-gradient(237.12deg, #003483 41.56%, #743584 72.97%);">
+  <header>
+    <h2>Kurzanleitung für Javascript Intl API</h2>
+  </header>
+  <div style="color: #FFFFFF;">
     <div style="display: flex;">
       <div style="flex-grow: 1;">
         <p>JavaScript Intl API ist ein Objekt in JavaScript für die Internationalisierung von Webanwendungen.</p>
-          Internationalisierung, auch bekannt als i18n, bezieht sich auf den Prozess der Anpassung von Software an verschiedene Sprachen, Kulturen und Länder ohne den Quellcode ändern zu müssen. 
-          </p>
+        Internationalisierung, auch bekannt als i18n, bezieht sich auf den Prozess der Anpassung von Software an
+        verschiedene Sprachen, Kulturen und Länder ohne den Quellcode ändern zu müssen.
+        </p>
       </div>
       <div style="flex-shrink: 0; margin-left: 10px;">
-        <img src= "https://blog.openreplay.com/images/the-complete-guide-to-localizing-your-app-with-javascripts-internationalization-api/images/hero.png" alt="Internationalisierung" height="215" width="393" style="margin-top: 25px;">
+        <img
+          src="https://blog.openreplay.com/images/the-complete-guide-to-localizing-your-app-with-javascripts-internationalization-api/images/hero.png"
+          alt="Internationalisierung" height="215" width="393" style="margin-top: 25px;">
       </div>
     </div>
-    <p>JavaScript Intl bietet Entwicklern eine einfache und effektive Möglichkeit, Anwendung in den Standards der Region abhängig von den Präferenzen des Nutzers anzuzeigen. Dadurch wird eine bessere User Experience ermöglicht.</p>
-      <button style="background-color:#743584 ;" onclick="window.location.href = 'https://locize.com/blog/was-ist-i18n/';">Hier erfährst du mehr !</button>
-    </div>
-      <main style="color: #FFFFFF;">
+    <p>JavaScript Intl bietet Entwicklern eine einfache und effektive Möglichkeit, Anwendung in den Standards der Region
+      abhängig von den Präferenzen des Nutzers anzuzeigen. Dadurch wird eine bessere User Experience ermöglicht.</p>
+    <button style="background-color:#743584 ;"
+      onclick="window.location.href = 'https://locize.com/blog/was-ist-i18n/';">Hier erfährst du mehr !</button>
+  </div>
+  <main style="color: #FFFFFF;">
     <h3>JavaScript Intl API in unterschiedlichen Laufzeitumgebungen</h3>
-    <p>Die Intl-API wird in allen modernen Webbrowsern unterstützt, einschließlich Google Chrome, Mozilla Firefox, Apple Safari und Microsoft Edge. Die Verwendung der Intl-API in Browsern ist einfach und erfordert keine zusätzlichen Pakete oder Bibliotheken. Die API ist als integriertes Objekt im Browser verfügbar und sofort einsatzbereit.</p> 
-      <p>In Node.js wird die Intl-API in neueren Versionen unterstützt. Die Verwendung der Intl-API in Node ist einfach wie in Browsern und erfordert keine zusätzlichen Pakete oder Bibliotheken. </p>
-      <h3>Wozu braucht es diese WEB-API ?</h3>
-      <p>Die JavaScript Intl-API bietet eine Vielzahl von Funktionen und Objekten, die Entwickler verwenden können, um die Internationalisierung von Webanwendungen zu erleichtern.</p>
-      <p>Das am häufigsten verwendete Objekt ist das Intl.DateTimeFormat-Objekt, das Entwicklern die Möglichkeit gibt, Datums- und Uhrzeitangaben in verschiedenen Formaten anzuzeigen. So zum Beispiel das Anzeigen von Tagen vor Monaten in einigen Ländern oder das Anzeigen von Stunden im 24-Stunden-Format.
-        
-        <p>Die Funktion DateTimeFormat kann verwendet werden, um ein Datum in das gewünschte Format zu bringen. 
-          <p>Hier ein Beispiel:
-        <pre><code class="language-js">
+    <p>Die Intl-API wird in allen modernen Webbrowsern unterstützt, einschließlich Google Chrome, Mozilla Firefox, Apple
+      Safari und Microsoft Edge. Die Verwendung der Intl-API in Browsern ist einfach und erfordert keine zusätzlichen
+      Pakete oder Bibliotheken. Die API ist als integriertes Objekt im Browser verfügbar und sofort einsatzbereit.</p>
+    <p>In Node.js wird die Intl-API in neueren Versionen unterstützt. Die Verwendung der Intl-API in Node ist einfach
+      wie in Browsern und erfordert keine zusätzlichen Pakete oder Bibliotheken. </p>
+    <h3>Wozu braucht es diese WEB-API ?</h3>
+    <p>Die JavaScript Intl-API bietet eine Vielzahl von Funktionen und Objekten, die Entwickler verwenden können, um die
+      Internationalisierung von Webanwendungen zu erleichtern.</p>
+    <p>Das am häufigsten verwendete Objekt ist das Intl.DateTimeFormat-Objekt, das Entwicklern die Möglichkeit gibt,
+      Datums- und Uhrzeitangaben in verschiedenen Formaten anzuzeigen. So zum Beispiel das Anzeigen von Tagen vor
+      Monaten in einigen Ländern oder das Anzeigen von Stunden im 24-Stunden-Format.
+
+    <p>Die Funktion DateTimeFormat kann verwendet werden, um ein Datum in das gewünschte Format zu bringen.
+    <p>Hier ein Beispiel:
+    <pre><code class="language-js">
         constdate = newDate('2023-03-21'); 
         constformatter = newIntl.DateTimeFormat('de-DE', { 
           weekday: 'long', 
@@ -46,11 +61,15 @@
         console.log(formatter.format(date)); 
         // Ausgabe: "Dienstag, 21. März 2023"
       </code></pre>
-        
-      <p>In diesem Beispiel wird das Datum "2023-03-21" für den Wochentag, den Monat und das Jahr im deutschen Sprachraum formatiert. Der DateTimeFormat-Konstruktor akzeptiert ebenfalls verschiedene Optionen, um das Ausgabeformat anzupassen.
-      <p>Ein weiteres nützliches Objekt in JavaScript Intl ist das Intl.NumberFormat-Objekt, mit dem Entwickler Zahlen in verschiedenen Formaten anzeigen können. Hierzu gehört beispielsweise die Anzeige von Währungsbeträgen, Prozentzahlen oder auch Ganzzahlen.
-        <p>Hier ein Beispiel:</p>
-        <pre><code class="language-js">
+
+    <p>In diesem Beispiel wird das Datum "2023-03-21" für den Wochentag, den Monat und das Jahr im deutschen Sprachraum
+      formatiert. Der DateTimeFormat-Konstruktor akzeptiert ebenfalls verschiedene Optionen, um das Ausgabeformat
+      anzupassen.
+    <p>Ein weiteres nützliches Objekt in JavaScript Intl ist das Intl.NumberFormat-Objekt, mit dem Entwickler Zahlen in
+      verschiedenen Formaten anzeigen können. Hierzu gehört beispielsweise die Anzeige von Währungsbeträgen,
+      Prozentzahlen oder auch Ganzzahlen.
+    <p>Hier ein Beispiel:</p>
+    <pre><code class="language-js">
           const number = 123456.789;
           console.log(
             new Intl.NumberFormat("de-DE", { style: "currency", currency: "EUR" 
@@ -60,10 +79,13 @@
           );
           // Ausgabe: "123.456,79 €"
       </code></pre>
-        <p>In dem Beispielcode wird eine Zahl (number) im Währungsformat für Deutschland formatiert. Dazu wird ein neues Intl.NumberFormat-Objekt erstellt, dem die gewünschte Sprache ('de-DE') und das gewünschte Format (style: 'currency', currency: 'EUR') übergeben werden. Das Objekt wird dann verwendet, um die Zahl zu formatieren und das Ergebnis auf der Konsole auszugeben.</p>
-        <p>lorem ipsum</p>
-        <p>Hier ein Beispiel:</p>
-        <pre><code class="language-js">
+    <p>In dem Beispielcode wird eine Zahl (number) im Währungsformat für Deutschland formatiert. Dazu wird ein neues
+      Intl.NumberFormat-Objekt erstellt, dem die gewünschte Sprache ('de-DE') und das gewünschte Format (style:
+      'currency', currency: 'EUR') übergeben werden. Das Objekt wird dann verwendet, um die Zahl zu formatieren und das
+      Ergebnis auf der Konsole auszugeben.</p>
+    <p>lorem ipsum</p>
+    <p>Hier ein Beispiel:</p>
+    <pre><code class="language-js">
           let enFormatter = new Intl.RelativeTimeFormat('en-US', {
           style: 'narrow'
         });
@@ -75,11 +97,11 @@
         console.log(frFormatter.format(-1, 'day')); 
       </code></pre>
 
-      <p>lorem ipsum</p>
+    <p>lorem ipsum</p>
 
-      <p>lorem ipsum</p>
-      <p>Hier ein Beispiel:</p>
-      <pre><code class="language-js">
+    <p>lorem ipsum</p>
+    <p>Hier ein Beispiel:</p>
+    <pre><code class="language-js">
         const listFormat = new Intl.ListFormat("en-US");
         listFormat.format(['Dafe', 'Daneil', "Gbolahan", "Kelani", "David"]);
         
@@ -88,35 +110,46 @@
     </code></pre>
 
     <p>lorem ipsum</p>
-      <p>Hier ein Beispiel:</p>
-      <pre><code class="language-js">
-        const listFormat = new Intl.ListFormat("en-US");
-        listFormat.format(['Dafe', 'Daneil', "Gbolahan", "Kelani", "David"]);
+    <p>Hier ein Beispiel:</p>
+    <pre><code class="language-js">
+        let names = ['Adam', 'Bob','Åslaug', 'Ørjan'];
+
+        let enCollator = new Intl.Collator('en-US', { 
+          sensitivity: 'base' 
+        });
+        console.log(names.sort(enCollator.compare)); // ['Adam', 'Åslaug', 'Bob', 'Ørjan']
         
-        const listFormatOr = new Intl.ListFormat("en-US", {type: 'disjunction'});
-        listFormatOr.format(["Beans", "Rice", "Plantian"])
+        let svCollator = new Intl.Collator('sv-SE', { 
+          sensitivity: 'base' 
+        });
+        console.log(names.sort(svCollator.compare)); // ['Adam', 'Bob', 'Åslaug', 'Ørjan']
     </code></pre>
 
     <p>lorem ipsum</p>
-      </code></pre>
-      <h3>Weiterführende Links:</h3>
-      <ul>
-        <li>
-          <a style="color: white" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl?retiredLocale=de">Intl object</a>
-        </li>
-        <li>
-          <a style="color:  white" href="https://egghead.io/blog/understanding-the-intl-javascript-api">Understanding the Intl Javascript API</a>
-        </li>
-        <li>
-          <a style="color: white" href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">Intl.NumberFormat</a>
-        </li>
-      </ul>
-    </main>
-    <footer style="color: white">von Lara Sauer, Johanna Schuster, Lena Steinbrink - WT2</footer>
-    <!--Neccesary for code highlighting below - just dont touch it-->
-    <script src="/assets/highlight.min.js"></script>
-    <script>
-      hljs.highlightAll();
-    </script>
-  </body>
+    </code></pre>
+    <h3>Weiterführende Links:</h3>
+    <ul>
+      <li>
+        <a style="color: white"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl?retiredLocale=de">Intl
+          object</a>
+      </li>
+      <li>
+        <a style="color:  white" href="https://egghead.io/blog/understanding-the-intl-javascript-api">Understanding the
+          Intl Javascript API</a>
+      </li>
+      <li>
+        <a style="color: white"
+          href="https://developer.mozilla.org/en-US/docs/Web/JavaScript/Reference/Global_Objects/Intl/NumberFormat">Intl.NumberFormat</a>
+      </li>
+    </ul>
+  </main>
+  <footer style="color: white">von Lara Sauer, Johanna Schuster, Lena Steinbrink - WT2</footer>
+  <!--Neccesary for code highlighting below - just dont touch it-->
+  <script src="/assets/highlight.min.js"></script>
+  <script>
+    hljs.highlightAll();
+  </script>
+</body>
+
 </html>
