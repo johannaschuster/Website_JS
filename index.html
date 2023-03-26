@@ -47,7 +47,8 @@
 
     <h3>Wozu braucht es diese WEB-API ?</h3>
     <p>Die JavaScript Intl-API bietet eine Vielzahl von Methoden und Objekten, die Entwickler verwenden können, um die
-      Internationalisierung von Webanwendungen zu erleichtern. So ist es mit wenig Code möglich die Webanwendung für die Standards bestimmer Regionen zu konfigurieren.</p>
+      Internationalisierung von Webanwendungen zu erleichtern. So ist es mit wenig Code möglich die Webanwendung für die
+      Standards bestimmer Regionen zu konfigurieren.</p>
 
     <h3>Anwendungsbeispiele</h3>
     <p>Ein häufig verwendetes Objekt ist das <mark>Intl.DateTimeFormat-Objekt</mark> , das Entwicklern die
@@ -71,6 +72,7 @@
     <p>In diesem Beispiel wird das Datum "2023-03-21" für den Wochentag, den Monat und das Jahr im deutschen Sprachraum
       formatiert. Der DateTimeFormat-Konstruktor akzeptiert ebenfalls verschiedene Optionen, um das Ausgabeformat
       anzupassen.
+
     <p>Ein weiteres nützliches Objekt in JavaScript Intl ist das <mark>Intl.NumberFormat-Objekt</mark> , mit dem
       Entwickler Zahlen in
       verschiedenen Formaten anzeigen können. Hierzu gehört beispielsweise die Anzeige von Währungsbeträgen,
@@ -92,23 +94,22 @@
       Ergebnis auf der Konsole auszugeben.</p>
 
 
-    <p>lorem ipsum</p>
+    <p>Mit dem <mark>Intl.RelativeTimeFormat-Objekt</mark> kann man Zeitangaben in verschiedenen Formaten bzw. Sprachen
+      wiedergeben.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
-          let enFormatter = new Intl.RelativeTimeFormat('en-US', {
-          style: 'narrow'
-        });
-        console.log(enFormatter.format(-1, 'day')); 
-        //Ausgabe: 1d ago
-        
-        let deFormatter = new Intl.RelativeTimeFormat('de-DE', {
-          style: 'narrow'
-        });
-        console.log(deFormatter.format(-1, 'day')); 
-        //Ausgabe: vor 1 Tag
+      const relativeTimeFormat = new Intl.RelativeTimeFormat("en-US");
+      relativeTimeFormat.format(10, 'seconds');
+      //Ausgabe: in 10 seconds
+      relativeTimeFormat.format(-10, 'seconds');
+      //Ausgabe: 10 seconds ago
+      relativeTimeFormat.format(-5, 'month');
+      //Ausgabe: 5 months ago
+      relativeTimeFormat.format(3, 'year');
+      //Ausgabe: in 3 years
       </code></pre>
 
-    <p>lorem ipsum</p>
+    <p>Das Beispiel zeigt, </p>
 
     <p>lorem ipsum</p>
     <p>Hier ein Beispiel:</p>
