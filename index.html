@@ -60,13 +60,21 @@
           // Ausgabe: "123.456,79 €"
       </code></pre>
         <p>In dem Beispielcode wird eine Zahl (number) im Währungsformat für Deutschland formatiert. Dazu wird ein neues Intl.NumberFormat-Objekt erstellt, dem die gewünschte Sprache ('de-DE') und das gewünschte Format (style: 'currency', currency: 'EUR') übergeben werden. Das Objekt wird dann verwendet, um die Zahl zu formatieren und das Ergebnis auf der Konsole auszugeben.</p>
-        <p></p>
+        <p>lorem ipsum</p>
         <p>Hier ein Beispiel:</p>
         <pre><code class="language-js">
-     
+          let enFormatter = new Intl.RelativeTimeFormat('en-US', {
+          style: 'narrow'
+        });
+        console.log(enFormatter.format(-1, 'day')); // 1 day ago
+        
+        let frFormatter = new Intl.RelativeTimeFormat('fr-FR', {
+          style: 'narrow'
+        });
+        console.log(frFormatter.format(-1, 'day')); // -1 j
       </code></pre>
 
-      <p></p>
+      <p>lorem ipsum</p>
       
       </code></pre>
       <h3>Weiterführende Links:</h3>
