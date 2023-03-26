@@ -81,6 +81,8 @@
       Intl.NumberFormat-Objekt erstellt, dem die gewünschte Sprache ('de-DE') und das gewünschte Format (style:
       'currency', currency: 'EUR') übergeben werden. Das Objekt wird dann verwendet, um die Zahl zu formatieren und das
       Ergebnis auf der Konsole auszugeben.</p>
+
+
     <p>lorem ipsum</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
@@ -88,11 +90,13 @@
           style: 'narrow'
         });
         console.log(enFormatter.format(-1, 'day')); 
+        //Ausgabe: 1d ago
         
-        let frFormatter = new Intl.RelativeTimeFormat('fr-FR', {
+        let deFormatter = new Intl.RelativeTimeFormat('de-DE', {
           style: 'narrow'
         });
-        console.log(frFormatter.format(-1, 'day')); 
+        console.log(deFormatter.format(-1, 'day')); 
+        //Ausgabe: vor 1 Tag
       </code></pre>
 
     <p>lorem ipsum</p>
@@ -100,11 +104,13 @@
     <p>lorem ipsum</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
-        const listFormat = new Intl.ListFormat("en-US");
+        const listFormat = new Intl.ListFormat("de-DE");
         listFormat.format(['Dafe', 'Daneil', "Gbolahan", "Kelani", "David"]);
+        //Ausgabe: Dafe, Daneil, Gbolahan, Kelani und David
         
-        const listFormatOr = new Intl.ListFormat("en-US", {type: 'disjunction'});
-        listFormatOr.format(["Beans", "Rice", "Plantian"])      
+        const listFormatOr = new Intl.ListFormat("de-DE", {type: 'disjunction'});
+        listFormatOr.format(["Bohnen", "Reis", "Salat"])     
+        //Ausgabe: Bohnen, Reis oder Salat
     </code></pre>
 
     <p>lorem ipsum</p>
