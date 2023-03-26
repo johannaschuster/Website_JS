@@ -102,12 +102,16 @@
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
       const relativeTimeFormat = new Intl.RelativeTimeFormat("en-US");
+      
       relativeTimeFormat.format(10, 'seconds');
       //Ausgabe: in 10 seconds
+
       relativeTimeFormat.format(-10, 'seconds');
       //Ausgabe: 10 seconds ago
+
       relativeTimeFormat.format(-5, 'month');
       //Ausgabe: 5 months ago
+
       relativeTimeFormat.format(3, 'year');
       //Ausgabe: in 3 years
       </code></pre>
