@@ -109,13 +109,14 @@
       //Ausgabe: in 3 years
       </code></pre>
 
-    <p>Das Beispiel zeigt die Ausgabe der Zeitangaben im englischen Format. Im Code muss hierfür allerdings nur die Anzahl der Tage, 
-      Jahre, etc. und die Einheit dazu einem neuen RelativeTimeFormat-Objekt zugewiesen werden. 
+    <p>Das Beispiel zeigt die Ausgabe der Zeitangaben im englischen Format. Im Code muss hierfür allerdings nur die
+      Anzahl der Tage,
+      Jahre, etc. und die Einheit dazu einem neuen RelativeTimeFormat-Objekt zugewiesen werden.
       Daraus wird dann ein Satz in der jeweiligen Sprache im richtigen Format gebaut.</p>
 
-    <p>Ein weiteres Objekt wird für die verschiedenen Standards von aufzählungen benötigt. 
+    <p>Ein weiteres Objekt wird für die verschiedenen Standards von aufzählungen benötigt.
       Das <mark>Intl.ListFormat-Objekt</mark> kann alle Arten von Aufzählungen für die einzelnen Regionen generieren.
-    Das heißt es werden Wörter wie "und" oder "oder" zwischen die einzelnen Wörter gesetzt.</p>
+      Das heißt es werden Wörter wie "und" oder "oder" zwischen die einzelnen Wörter gesetzt.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
         const listFormat = new Intl.ListFormat("de-DE");
@@ -127,13 +128,17 @@
         //Ausgabe: Bohnen, Reis oder Salat
     </code></pre>
 
-    <p>Beim ersten Beispiel wurde eine Aufzählung im deutschen Format mit Trennwort "und" generiert. Beim zweiten Beispiel wurde das "und" durch ein "oder"
+    <p>Beim ersten Beispiel wurde eine Aufzählung im deutschen Format mit Trennwort "und" generiert. Beim zweiten
+      Beispiel wurde das "und" durch ein "oder"
       ersetzt. Dies wurde ganz einfach mit der Ergänzung {type: 'disjunction'} erreicht.
     </p>
 
-    <p>Sortierungen von Strings innerhalb eines Arrays kann man mit dem <mark>Intl.Collator-Objekt</mark> an die jeweiligen Standards anpassen. Bei besonderen Buchstaben, 
-    die nicht in allen Sprachen verwendet werden, wie zum Beispiel dem schwedischen "Å", ist die Sortierung von Region zu Region unterschiedlich.
-  Wenn man nun also Wörter in eine Reihenfolge bringen will und ein Wort mit einem solchen Buchstaben beginnt, kann es Regionsabhängig an verschiedenen Plätzen stehen.</p>
+    <p>Sortierungen von Strings innerhalb eines Arrays kann man mit dem <mark>Intl.Collator-Objekt</mark> an die
+      jeweiligen Standards anpassen. Bei besonderen Buchstaben,
+      die nicht in allen Sprachen verwendet werden, wie zum Beispiel dem schwedischen "Å", ist die Sortierung von Region
+      zu Region unterschiedlich.
+      Wenn man nun also Wörter in eine Reihenfolge bringen will und ein Wort mit einem solchen Buchstaben beginnt, kann
+      es Regionsabhängig an verschiedenen Plätzen stehen.</p>
     <p>Hier ein Beispiel:</p>
     <pre><code class="language-js">
         let names = ['Adam', 'Bob','Åslaug', 'Ørjan'];
@@ -151,15 +156,25 @@
         //Ausgabe: 'Adam', 'Bob', 'Åslaug', 'Ørjan'
     </code></pre>
 
-    <p>Das Beispiel zeigt genau den oben genannten Fall. Nach englischen Standards erfolgt eine andere Reihung der Wörter, als bei den schwedischen Standards 
+    <p>Das Beispiel zeigt genau den oben genannten Fall. Nach englischen Standards erfolgt eine andere Reihung der
+      Wörter, als bei den schwedischen Standards
       'Åslaug' steht im schwedischen erst eine Stelle weiter hinten als im englischen Standard.</p>
 
 
     <h3>locales argument</h3>
-    <p>Mit Hilfe des locales argument wird die vom User genutzte Region festgestellt. So kann mit Funktionen des Intl
-      APIs die richtige Darstellung der anpassbaren Daten bereitgestellt werden, ohne schon vorher eine Lokale angeben
-      zu müssen.
+    <p>Mit Hilfe des locales argument wird die vom User genutzte Region festgestellt.
+      So ist es möglich die genutzte Region des Users festzustellen und die Darstellung einzelner Daten dann individuell
+      anzupassen.
     </p>
+
+    <p>Hier ein Beispiel:</p>
+    <pre><code class="language-js">
+      console.log(new Intl.NumberFormat(locale).format(1234567890));
+      //Ausgabe für "en-US": "1,234,567,890"
+
+      //Ausgabe für "de-DE": "1.234.567.890"
+    </code></pre>
+    <p>Die Ausgabe ist so also individuell an den User angepasst.</p>
 
     </code></pre>
     <h3>Weiterführende Links und Quellen:</h3>
