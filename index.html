@@ -40,13 +40,7 @@
       wie in Browsern und erfordert keine zusätzlichen Pakete oder Bibliotheken. </p>
 
     <h3>locales argument</h3>
-    <p>The locales argument is used to determine the locale used in a given operation. The JavaScript implementation
-      examines locales, and then computes a locale it understands that comes closest to satisfying the expressed
-      preference. locales may be:
-
-      undefined (or omitted): The implementation's default locale will be used.
-      A locale: A locale identifier or an Intl.Locale object that wraps a locale identifier.
-      A list of locales: Any other value, that will be converted into an object and then treated as an array of locales.
+    <p>Mit Hilfe des locales argument wird die vom User genutzte Region festgestellt. So kann mit Funktionen des Intl APIs die richtige Darstellung der anpassbaren Daten bereitgestellt werden, ohne schon vorher eine Lokale angeben zu müssen.
     </p>
     <h3>Wozu braucht es diese WEB-API ?</h3>
     <p>Die JavaScript Intl-API bietet eine Vielzahl von Funktionen und Objekten, die Entwickler verwenden können, um die
